@@ -1,4 +1,5 @@
 import './globals.css'
+import Nav from './auth/nav'
 
 export const metadata = {
   title: 'Create Next App',
@@ -7,12 +8,16 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+      </head>
+      <body>
+        <Nav/>
+        {children}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+        </body>
     </html>
   )
 }
